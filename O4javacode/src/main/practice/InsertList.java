@@ -7,6 +7,7 @@ import java.util.List;
 public class InsertList {
 
 
+    // arrayList的疑问：长度和size的值应该是一样的吧，可是初始大小起什么作用呢？
     public static final int MAXSIZE = 16;
     public static void main(String[] args){
         List<String> numList = new ArrayList<>();

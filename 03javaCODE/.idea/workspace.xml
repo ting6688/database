@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7712a326-f0d2-412d-83ad-88d32bf331c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../O4javacode/src/main/practice/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../O4javacode/src/main/practice/SingleLinkTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02-CCode/insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/../02-CCode/insert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../O4javacode/src/main/practice/InsertList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O4javacode/src/main/practice/InsertList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../O4javacode/target/classes/practice/InsertList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../O4javacode/target/classes/practice/InsertList.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

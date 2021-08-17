@@ -1,11 +1,14 @@
 package practice;
 
+import lombok.Data;
+
 import java.util.HashMap;
 import java.util.List;
 
 /**
  * 单链表
  */
+@Data
 public class SingleLinkTable {
 
     /**
@@ -53,6 +56,25 @@ public class SingleLinkTable {
             return -1;
         }
         return list.get(index).getData();
+    }
+
+
+    public int getElem(int index){
+        SingleLinkTable nodeList = new SingleLinkTable();
+        int j = 1;
+        Node head = nodeList.getHead();
+        if(head!=null && j < index){
+            head = head.getNext();
+            // x = i ++;    //先让x变成i的值1，再让i加1; x = ++i;    //先让i加1, 再让x变成i的值1
+            // 自己写的话 j++,仅从j的结果上看，结果都是一样的j=j+1
+            ++j;
+        }
+        if(head==null || j > index){
+            System.out.println("第index个元素不存在");
+        }
+        // 取第index个元素的值
+        return head.getData();
+
     }
 
 

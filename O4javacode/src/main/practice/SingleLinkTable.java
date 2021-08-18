@@ -91,6 +91,7 @@ public class SingleLinkTable {
 
     /**
      * 在index位置处插入element
+     * 思路： 找到index-1位置的元素，待插入元素放入index
      *
      * @param index
      * @param element
@@ -110,12 +111,47 @@ public class SingleLinkTable {
             System.out.println("第index个元素不存在");
             return;
         }
-        // 获取第index个元素，作为待插入结点的前一个元素，新建一个结点，将element 赋值给第index个元素
+        // headNode的index为index-1 ,headNode的next为index
+        // 获取第index-1个元素，作为待插入结点的前一个元素，新建一个结点，将element 赋值给第index个元素
         Node indexNode = new Node(element);
         // 第index个元素指向原来headNode的下一个元素，原来headNode的下一个元素指向第index个元素
         indexNode.setNext(headNode.getNext());
         headNode.setNext(indexNode);
         return;
+    }
+
+
+    /**
+     * 删除第index个元素，返回第index各元素的值
+     *
+     * @param index
+     * @return
+     */
+    public int delNode(int index) {
+        int element = -1;
+        SingleLinkTable nodeList = new SingleLinkTable();
+        Node head = new Node(0);
+        nodeList.setHead(head);
+        int j = 1;
+        Node headNode = nodeList.getHead();
+        // 从第一个结点开始，不断向后寻找第index个结点的data
+        if (headNode != null && j < index) {
+            headNode = headNode.getNext();
+            j++;
+        }
+        // 第index个元素不存在
+        if (headNode.getNext() == null || j > index) {
+            System.out.println("第index个元素不存在");
+            return -1;
+        }
+        Node q = headNode.getNext();
+        // 将q的后继结点赋值给headNode的后继结点
+        headNode.setNext(q.getNext());
+        // 返回待删除元素的值
+        element = q.getData();
+        // 删除此结点，让系统回收结点，释放内存
+//        free(q);
+        return element;
     }
 
 
